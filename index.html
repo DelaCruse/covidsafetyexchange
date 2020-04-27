@@ -3,6 +3,9 @@
 <head>
 <title>COVID-19 Safety Exchange</title>
 <meta name="description" content="Free Web tutorials">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <script type="text/javascript">
   var shrs_empty =''; var shrs_MAP48320_loadSubPage = function (pageNum, aEl){	try{	var arrPage = shrs_getElementsByClassName(document.getElementById('shrs_MAP48320_target'), 'MAP48320_pagedDisplay');	var pageToshow = document.getElementById('MAP48320_page'+pageNum);	var menuEl = document.getElementById('shrs_MAP48320_pagingListEl');	var dspCurrentPage = document.getElementById('shrs_MAP48320_pagingDspCurrentPage');	for (var i=0;i<arrPage.length;i++)		arrPage[i].style.display = 'none';	pageToshow.style.display ='block';	var arrMenuList = menuEl.childNodes;	for (var i=0;i<arrMenuList .length;i++)		arrMenuList[i].className = 'shrs_MAP48320_notCurrentPage';	dspCurrentPage.innerHTML = pageNum;	if(aEl.parentNode)		aEl.parentNode.className = 'shrs_MAP48320_currentPage';	}catch(err){}	};shrs_getElementsByClassName = function(node, classname) {    var a = [];    var re = new RegExp('(^| )'+classname+'( |$)');    var els = node.getElementsByTagName("*");    for(var i=0,j=els.length; i<j; i++)        if(re.test(els[i].className))a.push(els[i]);    return a;};
