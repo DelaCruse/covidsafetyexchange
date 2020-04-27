@@ -14,9 +14,8 @@
     $(function() {
         $( "#dialog-1" ).dialog({
            autoOpen: false,
-	   width: 'auto', // overcomes width:'auto' and maxWidth bug
-    	   minWidth: 800,
-    	   height: 'auto'
+    	   maxWidth: 800,
+    	   height: '800'
             });
            $( "#opener" ).click(function() {
              $( "#dialog-1" ).dialog( "open" );
