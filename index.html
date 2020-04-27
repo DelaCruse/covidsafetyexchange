@@ -10,7 +10,16 @@
 <script type="text/javascript">
   var shrs_empty =''; var shrs_MAP48320_loadSubPage = function (pageNum, aEl){	try{	var arrPage = shrs_getElementsByClassName(document.getElementById('shrs_MAP48320_target'), 'MAP48320_pagedDisplay');	var pageToshow = document.getElementById('MAP48320_page'+pageNum);	var menuEl = document.getElementById('shrs_MAP48320_pagingListEl');	var dspCurrentPage = document.getElementById('shrs_MAP48320_pagingDspCurrentPage');	for (var i=0;i<arrPage.length;i++)		arrPage[i].style.display = 'none';	pageToshow.style.display ='block';	var arrMenuList = menuEl.childNodes;	for (var i=0;i<arrMenuList .length;i++)		arrMenuList[i].className = 'shrs_MAP48320_notCurrentPage';	dspCurrentPage.innerHTML = pageNum;	if(aEl.parentNode)		aEl.parentNode.className = 'shrs_MAP48320_currentPage';	}catch(err){}	};shrs_getElementsByClassName = function(node, classname) {    var a = [];    var re = new RegExp('(^| )'+classname+'( |$)');    var els = node.getElementsByTagName("*");    for(var i=0,j=els.length; i<j; i++)        if(re.test(els[i].className))a.push(els[i]);    return a;};
 </script>
-
+<script type="text/javascript">
+$('#wrapper').dialog({
+    autoOpen: false,
+    title: 'Basic Dialog'
+});
+$('#opener').click(function() {
+    $('#wrapper').dialog('open');
+    return false;
+});
+</script>
 <style>
 .header {
   text-align: center;
@@ -36,7 +45,11 @@
 </style>
 <body>
 <div class="header">
-  <h1>COVID-19 Safety Exchange</h1><button id="opener">Take Survey</button>
+  <h1>COVID-19 Safety Exchange</h1>
+<button id="opener">Open the dialog</button>
+<div id="wrapper">
+<style>.embed-container {position: relative; height: 0; padding-bottom:80%; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe name="survey123webform" width="500" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Vendor Feedback" src="//survey123.arcgis.com/share/642a2c6cdcda4e26824c02b0695d8baa" allow="geolocation https://survey123.arcgis.com; camera https://survey123.arcgis.com"></iframe></div><script>var survey123webform = document.getElementsByName('survey123webform')[0];window.addEventListener("message",e=>{if(e.data){var t=JSON.parse(e.data);"survey123:onFormLoaded"===t.event&&t.contentHeight&&(survey123webform.parentNode.style.height=t.contentHeight+"px")&&(survey123webform.parentNode.style["padding-bottom"]="unset")}});</script>
+</div>
 
 </div>
   <div>
