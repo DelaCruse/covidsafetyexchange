@@ -24,12 +24,7 @@
     $(function() {
         $( "#dialog-1" ).dialog({
            autoOpen: false,
-    	     height: '500',
-		buttons: {
-        	"OK": function () {
-            	$(this).dialog("close");
-        	}
-    		}
+    	     height: '500'
             });
            $( "#opener" ).click(function() {
              $( "#dialog-1" ).dialog( "open" );
@@ -37,7 +32,11 @@
         });
   
   $(document).ready(function(){
-        		$("#example").dialog({modal: true});
+        		$("#example").dialog({modal: true, buttons: {
+        	"OK": function () {
+            	$(this).dialog("close");
+        	}
+    		}});
     			});
 </script>
 
